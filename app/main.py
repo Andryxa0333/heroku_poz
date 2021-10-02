@@ -3,7 +3,7 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 @app.route("/"):
 def home():
-        return 'Once upon a time at MISIS!'
+        return "<H1>Once upon a time at MISIS!</H1>"
 @app.route("/search")
 def search_question():
         question = request.args.get('question')
