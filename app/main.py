@@ -14,3 +14,7 @@ def search_question():
         for iter in range(10):
                 links.append([res['items'][iter]['title'], res['items'][iter]['link'],res['items'][iter]['pagemap']['cse_image'][0]['src'] if 'cse_image' in res['items'][iter]['pagemap'].keys() else 'NULL'])
         return jsonify(count = 10, response = sites)
+@app.route("/sample_search")
+def search_question():
+        question = request.args.get('question')
+        return jsonify(count = "10", response = question)
